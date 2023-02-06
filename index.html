@@ -17,19 +17,20 @@
 <script type="text/babel">
     const root = document.getElementById("root");
     let counter = 0;
-    const countUp = () => {
-        counter = counter + 1 ;
-        render();
-    };
-    const Container = () => (
+    
+    function App (){
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+            setCounter(counter + 1);
+        };
+        return (
         <div>
             <h3>Total Count: {counter}</h3>
-            <button onClick={countUp}>Click</button>
+            <button onClick={onClick}>Click</button>
         </div>
-    );
-    const render = () => {
-        ReactDOM.render(<Container />, root);
+        );
     };
-    render();
+    
+    ReactDOM.render(<App />, root);
 </script>
 </html>
