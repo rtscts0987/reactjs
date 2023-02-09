@@ -1,6 +1,10 @@
 import { useState, useEffect} from "react";
 
 function Hello() {
+  useEffect(() => {
+    console.log("create :)");
+    return () => console.log("destory =]")
+  }, [])
   return <h1>hello</h1>;
 }
 
