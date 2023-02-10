@@ -6,10 +6,10 @@ import Detail from "./routes/Detail";
 function App() { 
   return <Router>
     <Switch>
-        <Route path="/hellow">
+        <Route path="/abou=us">
             <h1>Hello</h1>
         </Route>
-        <Route path="/movie">
+        <Route path="/movie/:id">
             <Detail />
         </Route>
         <Route path="/">
